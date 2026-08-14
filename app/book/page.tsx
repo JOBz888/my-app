@@ -1,6 +1,8 @@
 import Form from "@/components/Form";
 import { prisma } from "@/lib/prisma";
 
+export const dynamic = "force-dynamic";
+
 const bookPage = async () => {
   const books = await prisma.book.findMany({ orderBy: { createdAt: "desc" } });
 
